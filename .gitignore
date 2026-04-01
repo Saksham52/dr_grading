@@ -1,0 +1,22 @@
+type nul > .gitignore
+```
+
+Open `.gitignore` and paste this:
+```
+# Dataset
+data/raw/
+data/processed/
+
+# Model checkpoints
+outputs/checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pth
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+*.env
