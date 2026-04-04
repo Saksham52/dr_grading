@@ -89,11 +89,11 @@ This applies Ben Graham preprocessing to all 3,662 images and saves them to `dat
   - Data augmentation
 
 ### 📋 Next Steps
-1. `src/dataset.py` — Dataset class with weighted sampling
-2. `src/model.py` — EfficientNet-B4 with custom classification head
-3. `src/train.py` — Two phase training with Focal Loss
-4. `src/evaluate.py` — Quadratic Weighted Kappa, confusion matrix, ROC curves
-5. `src/gradcam.py` — Grad-CAM heatmap generation
+1. `src/dataset.py` - Dataset class with weighted sampling
+2. `src/model.py` - EfficientNet-B4 with custom classification head
+3. `src/train.py` - Two phase training with Focal Loss
+4. `src/evaluate.py` - Quadratic Weighted Kappa, confusion matrix, ROC curves
+5. `src/gradcam.py` - Grad-CAM heatmap generation
 6. `app.py` — Streamlit demo
 
 ## Key Concepts
