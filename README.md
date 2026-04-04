@@ -24,7 +24,7 @@ dr_grading/
 ```
 
 ## Dataset
-APTOS 2019 Blindness Detection — 3,662 labeled retinal fundus images across 5 severity grades:
+APTOS 2019 Blindness Detection - 3,662 labeled retinal fundus images across 5 severity grades:
 
 | Grade | Label | Count |
 |-------|-------|-------|
@@ -36,7 +36,7 @@ APTOS 2019 Blindness Detection — 3,662 labeled retinal fundus images across 5 
 
 Download from: https://www.kaggle.com/competitions/aptos2019-blindness-detection/data
 
-Place in `data/raw/` — folder structure should be:
+Place in `data/raw/` - folder structure should be:
 ```
 data/raw/
 ├── train_images/
@@ -99,16 +99,16 @@ This applies Ben Graham preprocessing to all 3,662 images and saves them to `dat
 ## Key Concepts
 
 **Why EfficientNet-B4?**
-Pretrained on ImageNet — already knows edges, curves, textures. We fine-tune it for retinal images instead of training from scratch on only 3,662 images.
+Pretrained on ImageNet - already knows edges, curves, textures. We fine-tune it for retinal images instead of training from scratch on only 3,662 images.
 
 **Why Focal Loss?**
-Dataset is heavily imbalanced — 1,805 healthy cases vs 193 Severe cases. Focal Loss silences easy majority cases so the model focuses on learning hard minority cases.
+Dataset is heavily imbalanced - 1,805 healthy cases vs 193 Severe cases. Focal Loss silences easy majority cases so the model focuses on learning hard minority cases.
 
 **Why Grad-CAM?**
 Doctors need to see where the model looked, not just what it predicted. Grad-CAM generates heatmaps showing which retinal regions influenced the decision.
 
 ## Evaluation Metric
-Quadratic Weighted Kappa — penalizes predictions that are far from the true grade more heavily than close ones. More appropriate than accuracy for ordinal medical grading.
+Quadratic Weighted Kappa - penalizes predictions that are far from the true grade more heavily than close ones. More appropriate than accuracy for ordinal medical grading.
 
 ## Target Performance
 Quadratic Weighted Kappa ≥ 0.85 on held-out test set.
