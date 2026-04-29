@@ -20,7 +20,7 @@ def preprocess_image(image_path):
 
     # Step 3 Resize and clip pixel values
     img = np.clip(img, 0, 255).astype(np.uint8) # pexel below 0 becomes 0 , pixel above 255 becomes 255
-    img = cv2.resize(img, (224, 224))
+    img = cv2.resize(img, (380, 380))
 
     return img
 
